@@ -1,0 +1,33 @@
+judo=graph.formula(Carmona+-Ishii,Kurachi+-Ogawa,Kurachi+-Hashizume,Kanayama+-Kurachi,Carmona+- Kanayama,
+  M.Shinohara+- Kosakai, M.Shinohara+-Ogawa,M.Shinohara+-Tani,Onmura+-M.Shinohara,                
+  Katsumata-+Sogabe, Kihara-+Sogabe ,Sogabe -+Onmura,
+ Maia+- Machi,Suzuki+-Maia,Iwamoto+-Maia,S.vieira+-Iwamoto,S.vieira+-Suzuki,S.vieira-+D.Vieira,
+ C.Gracie-+Britto,Fukaia-+Britto,Gonçalves+-Britto,Gonçalves+-D.Vieira,
+ Kosakai-+M.Shinohara,Ogawa-+M.Shinohara,Tani-+M.Shinohara, M.Shinohara-+J.Shinohara,M.Shinohara-+Miguel,   
+ C.Gracie-+Mehdi,Mehdi-+Adnet,Adnet-+Duarte,Duarte-+Sampaio,
+ Katayama-+Adnet,
+ C.Gracie-+H.Gracie,H.Gracie-+Mehdi,Mehdi-+Adnet,
+ Ogawa-+H.Yamamoto,H.Yamamoto-+A.Yamamoto,A.Yamamoto-+Guimarães,
+ J.Shinohara-+Honorato,
+ Sugui-+Umakakeba,Ishii-+Umakakeba,Umakakeba-+Tsusui,Tsusui-+Honorato,
+ Umakakeba-+Omar,Omar-+Camilo,Tsutsui-+Camilo,
+ Shingo-+Oide,Ogawa-+Oide,Oide-+Almeida,Almeida-+Camilo,
+ Hashizume-+Kurachi,Nukaria-+Kurachi,Kurachi-+Medeiros,Medeiros-+Nascimento,Nascimento-+Guilheiro,Sampaio-+Guilheiro,
+ Nagashima-+Mesquita,Mesquita-+ Bernardes, Bernardes-+Canto,
+ C.Gracie-+Desconhecido,Desconhecido-+Caruzo,Caruzo-+Canto,
+ C.Gracie-+G.Gracie,G.Gracie-+Britto,Britto-+DeLucca,DeLucca-+Canto,
+ Bernardes-+Dornelles,Dornelles-+Fonseca,Fonseca-+Canto
+ )
+plot.igraph(judo)
+
+judo.m <- as.data.frame(get.edgelist(judo))
+require(bipartite)
+plot(net, edge.arrow.size=.4)
+
+teste =as.matrix(judo, matrix.type = adjacency
+                 )
+
+plot(judo, vertex.shape="none",edge.arrow.size=.2, vertex.label=V(judo)$media, 
+     vertex.label.font=2, vertex.label.color="gray40",
+     vertex.label.cex=.7, edge.color="gray85")
+                 
