@@ -30,4 +30,13 @@ teste =as.matrix(judo, matrix.type = adjacency
 plot(judo, vertex.shape="none",edge.arrow.size=.2, vertex.label=V(judo)$media, 
      vertex.label.font=2, vertex.label.color="gray40",
      vertex.label.cex=.7, edge.color="gray85")
+ ### Network with node size based on edges number    
+ # Turn it into igraph object
+network=graph_from_data_frame(d=judo.m, directed=F) 
+ 
+# Count the number of degree for each node:
+deg=degree(network, mode="all")
+ 
+# Plot
+plot(network, vertex.size=deg*6, vertex.color=rgb(0.1,0.7,0.8,0.5) )
                  
