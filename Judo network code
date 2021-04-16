@@ -24,7 +24,7 @@ plot.igraph(judo)
 require(influential)
 Graph_IVI <-   ivi(graph = judo, mode = "out")
 Graph_IVI_plot <- cent_network.vis(graph = judo, cent.metric = Graph_IVI, legend.title = "IVI",
-plot.title = "IVI-based Network")
+plot.title = "IVI-based Network"); Graph_IVI_plot
                                                                     
                                                                            
  Graph_IVI_plot
