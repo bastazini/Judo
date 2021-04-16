@@ -20,6 +20,15 @@ judo=graph.formula(Carmona+-Ishii,Kurachi+-Ogawa,Kurachi+-Hashizume,Kanayama+-Ku
  )
 plot.igraph(judo)
 
+####Influence
+require(influential)
+Graph_IVI <-   ivi(graph = My_graph, mode = "out")
+Graph_IVI_plot <- cent_network.vis(graph = My_graph, cent.metric = Graph_IVI, legend.title = "IVI",
+plot.title = "IVI-based Network")
+                                                                    
+                                                                           
+ Graph_IVI_plot
+
 judo.m <- as.data.frame(get.edgelist(judo))
 require(bipartite)
 plot(net, edge.arrow.size=.4)
